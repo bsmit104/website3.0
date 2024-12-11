@@ -1,0 +1,228 @@
+
+.popups7 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #989ea1;
+    border: 2px outset #818181;
+    box-shadow: 0 0 5px #000;
+    color: #000;
+    padding: 1px; /* Reduced padding */
+    width: fit-content; /* Adjusts width to content size */
+    max-width: 90%; /* Prevents the box from becoming too large on small screens */
+    z-index: 31;
+    display: none; /* Start hidden */
+  }
+  
+  .popups-title7 {
+    background: linear-gradient(90deg, navy, #0000a0);
+    border: 3px outset #0000a0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+  }
+  
+  /* Ensure skull-image does not affect overall size */
+  .popups-text img {
+    max-width: 100%; /* Ensure the image does not overflow */
+    height: auto;
+  }
+  
+  .popups-text {
+    text-align: center; /* Centers all content inside this div */
+    padding-bottom: 15px; /* Adds padding between the button and the bottom of the grey box */
+  }
+  
+  .popups-close {
+    display: inline-block; /* Ensures the button remains properly sized */
+    margin-top: 10px; /* Adds space between the image and the button */
+    padding: 8px 16px; /* Adds padding inside the button for a better look */
+    font-size: 16px; /* Adjust font size for clarity */
+    background-color: #c3c3c3; /* Button background color */
+    border: 1px outset #818181; /* Button border */
+    cursor: pointer; /* Pointer on hover */
+  }
+  
+  .popups-close,
+  .popups-close-top {
+    background-color: #c3c3c3;
+    border: 1px outset #818181;
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .popups7 {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes flash {
+    0%,
+    49% {
+      color: white;
+    }
+    50%,
+    100% {
+      color: transparent;
+    }
+  }
+  
+  .popups-title7 {
+    animation: flash 0.75s infinite;
+  }
+  
+  .skull-image {
+    width: 300px;
+    height: auto;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*good*/
+  
+  .popups7 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #989ea1;
+    border: 2px outset #818181;
+    box-shadow: 0 0 5px #000;
+    color: #000;
+    padding: 1px; /* Reduced padding */
+    width: fit-content; /* Adjusts width to content size */
+    max-width: 90%; /* Prevents the box from becoming too large on small screens */
+    z-index: 31;
+    display: none; /* Start hidden */
+  }
+  
+  .popups-title7 {
+    background: linear-gradient(90deg, navy, #0000a0);
+    border: 3px outset #0000a0;
+    color: white;
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers text and button vertically */
+    justify-content: space-between; /* Pushes content to the edges */
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+  }
+  
+  .popups-close-top {
+    background-color: #c3c3c3;
+    border: 1px outset #818181;
+    cursor: pointer;
+    padding: 5px 10px; /* Adjust size for better usability */
+    font-size: 16px; /* Adjust font size for clarity */
+    margin-left: 10px; /* Adds space between the text and the close button */
+  }
+  
+  .popups-text img {
+    max-width: 100%; /* Ensure the image does not overflow */
+    height: auto;
+  }
+  
+  .popups-text {
+    text-align: center; /* Centers all content inside this div */
+    padding-bottom: 15px; /* Adds padding between the button and the bottom of the grey box */
+  }
+  
+  .popups-close {
+    display: inline-block; /* Ensures the button remains properly sized */
+    margin-top: 10px; /* Adds space between the image and the button */
+    padding: 8px 16px; /* Adds padding inside the button for a better look */
+    font-size: 16px; /* Adjust font size for clarity */
+    background-color: #c3c3c3; /* Button background color */
+    border: 1px outset #818181; /* Button border */
+    cursor: pointer; /* Pointer on hover */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .popups7 {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes flash {
+    0%,
+    49% {
+      color: white;
+    }
+    50%,
+    100% {
+      color: transparent;
+    }
+  }
+  
+  .popups-title7 {
+    animation: flash 0.75s infinite;
+  }
+  
+  .skull-image {
+    width: 300px;
+    height: auto;
+  }
+  
+
+  /* Positioning classes */
+.popup-top-left {
+  top: 20px;
+  left: 20px;
+  transform: translate(0, 0);
+}
+
+.popup-top-right {
+  top: 20px;
+  right: 20px;
+  transform: translate(0, 0);
+}
+
+.popup-bottom-left {
+  bottom: 20px;
+  left: 20px;
+  transform: translate(0, 0);
+}
+
+.popup-bottom-right {
+  bottom: 20px;
+  right: 20px;
+  transform: translate(0, 0);
+}
+
+.popup-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
