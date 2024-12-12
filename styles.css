@@ -241,114 +241,158 @@ a.card-link {
     height: auto;
   } */
 
-  .popups7 {
-    position: fixed;
-    background: #989ea1;
-    border: 2px outset #818181;
-    box-shadow: 0 0 5px #000;
-    color: #000;
-    padding: 1px;
-    width: fit-content;
-    max-width: 90%; /* Prevents the box from becoming too large on small screens */
-    z-index: 31;
-    display: none;
-    animation: fadeIn 0.5s ease-out;
-    max-height: 90vh; /* Prevents the popup from exceeding the screen height */
-    overflow: auto; /* Enables scrolling if the content exceeds max height */
-  }
-  
-  .popups-title7 {
-    background: linear-gradient(90deg, navy, #0000a0);
-    border: 3px outset #0000a0;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  .popups-close-top {
-    background-color: #c3c3c3;
-    border: 1px outset #818181;
-    cursor: pointer;
-    padding: 5px 10px;
-    font-size: 16px;
-    margin-left: 10px;
-  }
-  
-  .popups-text {
-    text-align: center;
-    padding-bottom: 15px;
-  }
-  
-  .popups-close {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #c3c3c3;
-    border: 1px outset #818181;
-    cursor: pointer;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes flash {
-    0%, 49% {
-      color: white;
-    }
-    50%, 100% {
-      color: transparent;
-    }
-  }
-  
-  .popups-title7 {
-    animation: flash 0.75s infinite;
-  }
-  
-  .skull-image {
-    width: 300px;
-    height: auto;
-  }
-  
-  /* Positioning classes with margin to prevent cutoffs */
-  .popup-top-left {
-    top: 20px;
-    left: 20px;
-  }
-  
-  .popup-top-right {
-    top: 20px;
-    right: 20px;
-  }
-  
-  .popup-bottom-left {
-    bottom: 20px;
-    left: 20px;
-  }
-  
-  .popup-bottom-right {
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .popup-center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.popups7 {
+  position: fixed;
+  background: #989ea1;
+  border: 2px outset #818181;
+  box-shadow: 0 0 5px #000;
+  color: #000;
+  padding: 1px;
+  width: fit-content;
+  max-width: 90%; /* Prevents the box from becoming too large on small screens */
+  z-index: 31;
+  display: none;
+  animation: fadeIn 0.5s ease-out;
+  max-height: 90vh; /* Prevents the popup from exceeding the screen height */
+  overflow: auto; /* Enables scrolling if the content exceeds max height */
+}
 
-  .popup-slightly-left {
-    bottom: 20px; /* Maintain bottom positioning */
-    right: 20px; /* Position near the right edge */
-    transform: translateX(-50px); /* Shift the popup 50px to the left */
+.popups-title7 {
+  background: linear-gradient(90deg, navy, #0000a0);
+  border: 3px outset #0000a0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.popups-close-top {
+  background-color: #c3c3c3;
+  border: 1px outset #818181;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.popups-text {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.popups-close {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #c3c3c3;
+  border: 1px outset #818181;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0%,
+  49% {
+    color: white;
+  }
+  50%,
+  100% {
+    color: transparent;
+  }
+}
+
+.popups-title7 {
+  animation: flash 0.75s infinite;
+}
+
+.skull-image {
+  width: 300px;
+  height: auto;
+}
+
+/* Floating Virus Button */
+#virusButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100; /* Make sure it's on top of other content */
+}
+
+#virusButton img {
+  width: 100px; /* Adjust size of the image */
+  height: auto;
+}
+
+/* Hide the button when popup1 is visible */
+#popup1[style*="display: block"] ~ #virusButton {
+  display: none;
+}
+
+/* Optional styling for the "END_THE_MADNESS.exe" button */
+#endTheMadness {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#endTheMadness:hover {
+  background-color: darkred;
+}
+
+/* Positioning classes with margin to prevent cutoffs */
+.popup-top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.popup-top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.popup-bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.popup-bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.popup-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-slightly-left {
+  bottom: 20px; /* Maintain bottom positioning */
+  right: 20px; /* Position near the right edge */
+  transform: translateX(-50px); /* Shift the popup 50px to the left */
+}
+
+.popup-slightly-right {
+  bottom: 20px; /* Maintain bottom positioning */
+  left: 20px; /* Position near the right edge */
+  transform: translateX(50px); /* Shift the popup 50px to the left */
+}
