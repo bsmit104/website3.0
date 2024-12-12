@@ -241,6 +241,16 @@ a.card-link {
     height: auto;
   } */
 
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999; /* Ensures it appears above all content */
+    pointer-events: none; /* Prevents interfering with underlying content functionality */
+  }
+
 .popups7 {
   position: fixed;
   background: #989ea1;
@@ -250,11 +260,13 @@ a.card-link {
   padding: 1px;
   width: fit-content;
   max-width: 90%; /* Prevents the box from becoming too large on small screens */
-  z-index: 31;
+  z-index: 9999;
   display: none;
   animation: fadeIn 0.5s ease-out;
   max-height: 90vh; /* Prevents the popup from exceeding the screen height */
   overflow: auto; /* Enables scrolling if the content exceeds max height */
+  pointer-events: auto;
+  position: absolute;
 }
 
 .popups-title7 {
