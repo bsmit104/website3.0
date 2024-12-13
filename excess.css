@@ -226,3 +226,36 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* body {
+  background-color: #6800d0 !important;
+  font-family: Arial, sans-serif;
+} */
+
+/* .medievalsharp-regular {
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+} */
+
+/* Nav bar tweaks */
+.navbar-custom {
+  background-color: #000000; /* Dark shade */
+  /* font-family: 'Kode Mono', monospace; */
+}
+
+/* Navbar styles */
+/* Optional - make navbar background semi-transparent */
+.navbar-custom {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white; /* Navbar text color */
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #f8f9fa; /* Lighten hover color */
+}

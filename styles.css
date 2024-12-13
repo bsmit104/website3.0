@@ -1,3 +1,50 @@
+/* Global Styles */
+
+/* Backgrounds */
+body {
+  /* background-image: url("assets/static.jpg"); Background image for index */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Wallpoet', sans-serif; /* The font used on index.html */
+  color: white; /* Set text color to white */
+  background-color: #6800d0 !important;
+}
+
+/* If you have other background images on different pages, you can target them separately */
+.projects-page body {
+  background-image: url("assets/static3.jpg"); /* Background image for projects.html */
+}
+
+
+/* White Words */
+
+/* General Page Headings */
+h1, h2, .display-2 {
+  font-family: 'Wallpoet', sans-serif; /* Apply the same font family used in index.html */
+  color: white; /* Set text color to white */
+}
+
+/* Paragraphs */
+p, .lead {
+  font-family: 'Wallpoet', sans-serif; /*remove this for reg font*/
+  color: white; /* Ensures all paragraphs and leads have white text */
+}
+
+/* Featurette Section */
+.featurette-heading {
+  color: white; /* Featurette heading text color */
+}
+
+.overlay-text {
+  color: white; /* Ensure text in overlay cards is white */
+}
+
+
+
+/* NAV */
+
+
 /* Nav bar tweaks */
 .navbar-custom {
   background-color: #000000; /* Dark shade */
@@ -14,37 +61,21 @@
   color: #ffffff; /* Change for hover state */
 }
 
-body {
-  /* background-color: #091833 !important; */
-  /* background-color: #a8cd83; light green */
-  background-color: #6800d0 !important;
-  /* background-image: url("assets/cybercity.png");
-  background-repeat: repeat;
-  background-size: auto; */
-  /* background-size: 64px; */
-  /*background-color: #010101;*/
-  font-family: Arial, sans-serif;
-}
-
-.medievalsharp-regular {
-  font-family: "MedievalSharp", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 24px;
-}
-
 .wallpoet-regular {
   font-family: "Wallpoet", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+
+/* Effective Effects */
+
 /* Remove underline */
 a.card-link {
   text-decoration: none;
 }
 
-/* glowing effect */
+/* glowing effect aka Juice */
 .card {
   box-shadow: 0 0 10px #d1fdff !important; /* Set a glowing shadow effect */
   transition: box-shadow 0.3s ease; /* Add transition for smooth animation */
@@ -240,6 +271,17 @@ a.card-link {
     max-width: 100%;
     height: auto;
   } */
+
+  .hover-img {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .hover-img:hover {
+    content: url("assets/brayden2.gif");
+  }
+
+
+  /*popups*/
 
   .popup-overlay {
     position: fixed;
