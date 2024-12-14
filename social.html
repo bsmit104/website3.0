@@ -55,14 +55,14 @@
   <div class="container text-center mt-4">
     <div class="btn-group flex-wrap" role="group" aria-label="Navigation Buttons">
       <a href="data.html" class="button-54">DATA SCIENCE</a>
-      <a href="social.html" class="button-54">OTHER INTERESTING PROJECTS</a>
+      <a href="projects.html" class="button-54">GAME DEV</a>
       <a href="playable.html" class="button-54">PLAYABLE EXPERIENCES</a>
     </div>
   </div>
   
 
   <div class="container text-center mt-4">
-    <h1 class="display-2">VIDEO GAMES</h1>
+    <h1 class="display-2">OTHER INTERESTING PROJECTS</h1>
   </div>
 
   <div class="container">
@@ -70,22 +70,27 @@
     
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">BALLISTIC</h2>
+        <h2 class="featurette-heading">UCSC DUCKS</h2>
         <p class="lead">
-          BALLISTIC is a my capstone project for UCSC. I knew from the day I applied to the college that I 
-          intended to strive to make one of the best games in the program. I spent the time leading up to
-          the project practicing leading development teams, honing skills regarding pipelining and efficient
-          work flows as well as a strong sense of design. Using these, I was able to successfully lead my team 
-          in making BALLISTIC, a 10 player multiplayer dodgeball action party game.
+            I secretly hid tiny resin ducks around UCSC's campus—nestled in buildings, 
+            libraries, forests, residential areas, and beyond—posting clues on social 
+            media to turn each find into a mini adventure. It wasn’t just about finding 
+            a duck; it was about creating a playable experience where people could actively 
+            participate in the hunt, explore hidden corners of the campus, and rediscover its 
+            charm. As students and staff followed the clues and unearthed these tiny treasures, 
+            I became an anonymous celebrity— the elusive "duck-hiding vigilante." Through this 
+            playful quest, I sparked a sense of adventure, turning UCSC into a living treasure 
+            hunt and reviving the walking culture that had slowly faded.
         </p>
       </div>
-      <div class="col-md-5 order-md-1">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ga6Gv9--SLo?si=d33f-lMP4rrcJQXQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="col-md-4 order-md-1">
+        <img src="assets/ucscducks.png" alt="Your Image" class="img-fluid" />
+        <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ga6Gv9--SLo?si=d33f-lMP4rrcJQXQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
       <!-- https://www.youtube.com/embed/xb-QCeGIBgw?si=iSvBNJayu8v-soAX -->
     </div>
     <div class="row featurette">
-      <div class="col-md-7 order-md-2">
+      <div class="col-md-8 order-md-2">
         <h2 class="featurette-heading">Potion Quest</h2>
         <p class="lead">
           A friend and I started a game development team called Sailboat Studio. We actively 
@@ -96,29 +101,27 @@
           and more! We completed this project in around 8 days.
         </p>
       </div>
-      <div class="col-md-5 order-md-1">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/sG8_3n6xsH8?si=skIQ3XiRGqEQfrAE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="col-md-4 order-md-1">
+        <!-- <video id="myVideo" width="640" height="360" onclick="togglePlay()">
+            <source src="assets/aliensrising.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> -->
+          <iframe width="360" height="315" 
+          src="https://www.youtube.com/embed/Q_j8cT3vIBM" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+      </iframe>
       </div>
     </div>
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">BALLISTIC</h2>
-        <p class="lead">
-          SENTINEL is a project that a friend and I made for our Game Technologies class, 
-          a class focused heavily around understanding everything there is to know about Unity.
-          I was the programmer for the project and worked alongside my friend in design.
-        </p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/214U-QQs7_o?si=1am5GUOZwgHnyVAY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
+
     </div> 
     </div> 
 
 
     <!-- album -->
-    <div class="container text-center mt-4">
+    <!-- <div class="container text-center mt-4">
       <h1 class="display-2">Links and More</h1>
     </div>
 
@@ -206,7 +209,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     
     <br>
     <br>
@@ -215,6 +218,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="myParticles.js"></script>
+
+<script>
+    function togglePlay() {
+      var video = document.getElementById("myVideo");
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+  </script>
 
 </body>
 </html>
