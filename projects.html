@@ -16,6 +16,15 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+
+      #particles-js {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Send particles behind other content */
+      }
   </style>
 </head>
 <body>
@@ -41,8 +50,19 @@
     </div>
   </nav>
 
+  <div id="particles-js"></div>
+
   <div class="container text-center mt-4">
-    <h1 class="display-2">Some of my Favs</h1>
+    <div class="btn-group" role="group" aria-label="Navigation Buttons">
+      <a href="about.html" class="button-54">DATA SCIENCE</a>
+      <a href="portfolio.html" class="button-54">OTHER INTERESTING PROJECTS</a>
+      <a href="contact.html" class="button-54">PLAYABLE EXPERIENCES</a>
+    </div>
+  </div>
+  
+
+  <div class="container text-center mt-4">
+    <h1 class="display-2">VIDEO GAMES</h1>
   </div>
 
   <div class="container">
@@ -193,6 +213,83 @@
     <br>
     <br>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 80, // Number of particles
+          density: {
+            enable: true,
+            value_area: 800 // Particle density in pixels
+          }
+        },
+        color: {
+          value: "#ffffff" // Particle color
+        },
+        shape: {
+          type: "circle", // Shape of particles (circle, edge, triangle, etc.)
+          stroke: {
+            width: 0,
+            color: "#000000"
+          }
+        },
+        opacity: {
+          value: 0.5, // Transparency level
+          random: false,
+          anim: {
+            enable: false
+          }
+        },
+        size: {
+          value: 5, // Particle size
+          random: true,
+          anim: {
+            enable: false
+          }
+        },
+        line_linked: {
+          enable: true, // Connect particles with lines
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3, // Particle movement speed
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse" // Particles react to mouse hover
+          },
+          onclick: {
+            enable: true,
+            mode: "push" // Add particles on click
+          }
+        },
+        modes: {
+          repulse: {
+            distance: 100
+          },
+          push: {
+            particles_nb: 4 // Particles added on click
+          }
+        }
+      },
+      retina_detect: true // Optimized for retina displays
+    });
+  </script>
+  
 </body>
 </html>

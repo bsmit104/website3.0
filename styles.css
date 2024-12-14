@@ -450,3 +450,99 @@ a.card-link {
   left: 20px; /* Position near the right edge */
   transform: translateX(50px); /* Shift the popup 50px to the left */
 }
+
+
+
+
+
+
+.button-53 {
+  background-color: #3DD1E7;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center; /* Centers text vertically */
+  line-height: 1.25rem; /* Reduced line height for compact text */
+  padding: 0.5rem 1rem; /* Reduced padding for tighter design */
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  white-space: nowrap; /* Prevents text from wrapping */
+  width: auto; /* Adjusts to fit text without forcing full width */
+  max-width: 460px;
+  margin: 0 0.5rem; /* Adds spacing between buttons */
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-53:focus {
+  outline: 0;
+}
+
+.button-53:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-53 {
+    font-size: 1.15rem; /* Adjust font size for larger screens */
+    padding: 0.5rem 1.25rem; /* Slightly larger padding for better spacing */
+  }
+}
+
+
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.5px; /* Adjusted for slightly tighter text */
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff; /* White text for better contrast */
+  background-color: #ff69b4; /* Hot pink background */
+  cursor: pointer;
+  border: 3px solid #ff69b4; /* Matching border color */
+  padding: 0.1em 0.5em; /* Minimal vertical padding */
+  box-shadow: 1px 1px 0px 0px #e75480, 
+              2px 2px 0px 0px #e75480, 
+              3px 3px 0px 0px #e75480, 
+              4px 4px 0px 0px #e75480, 
+              5px 5px 0px 0px #e75480; /* Shadow in a darker pink */
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap; /* Prevents wrapping */
+  margin: 0 0.5rem; /* Adds spacing between buttons */
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.1em 0.75em; /* Slightly more horizontal padding on larger screens */
+  }
+}
