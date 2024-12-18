@@ -6,7 +6,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: 'Wallpoet', sans-serif; /* The font used on index.html */
+  font-family: "Wallpoet", sans-serif; /* The font used on index.html */
   color: white; /* Set text color to white */
   background-color: #6800d0 !important;
 }
@@ -16,18 +16,20 @@ body {
   background-image: url("assets/static3.jpg"); /* Background image for projects.html */
 }
 
-
 /* White Words */
 
 /* General Page Headings */
-h1, h2, .display-2 {
-  font-family: 'Wallpoet', sans-serif; /* Apply the same font family used in index.html */
+h1,
+h2,
+.display-2 {
+  font-family: "Wallpoet", sans-serif; /* Apply the same font family used in index.html */
   color: white; /* Set text color to white */
 }
 
 /* Paragraphs */
-p, .lead {
-  font-family: 'Wallpoet', sans-serif; /*remove this for reg font*/
+p,
+.lead {
+  font-family: "Wallpoet", sans-serif; /*remove this for reg font*/
   color: white; /* Ensures all paragraphs and leads have white text */
 }
 
@@ -40,10 +42,7 @@ p, .lead {
   color: white; /* Ensure text in overlay cards is white */
 }
 
-
-
 /* NAV */
-
 
 /* Nav bar tweaks */
 .navbar-custom {
@@ -66,7 +65,6 @@ p, .lead {
   font-weight: 400;
   font-style: normal;
 }
-
 
 /* Effective Effects */
 
@@ -97,7 +95,7 @@ a.card-link {
 
 .contact-icons a {
   margin: 0 20px;
-  font-size: 100px;
+  font-size: 70px;
   color: #ffffff;
   transition: color 0.2s ease-in-out;
 }
@@ -272,26 +270,25 @@ a.card-link {
     height: auto;
   } */
 
-  .hover-img {
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .hover-img:hover {
-    content: url("assets/brayden2.gif");
-  }
+.hover-img {
+  transition: opacity 0.3s ease-in-out;
+}
 
+.hover-img:hover {
+  content: url("assets/brayden2.gif");
+}
 
-  /*popups*/
+/*popups*/
 
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999; /* Ensures it appears above all content */
-    pointer-events: none; /* Prevents interfering with underlying content functionality */
-  }
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999; /* Ensures it appears above all content */
+  pointer-events: none; /* Prevents interfering with underlying content functionality */
+}
 
 .popups7 {
   position: fixed;
@@ -451,11 +448,6 @@ a.card-link {
   transform: translateX(50px); /* Shift the popup 50px to the left */
 }
 
-
-
-
-
-
 .button-54 {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -467,11 +459,12 @@ a.card-link {
   cursor: pointer;
   border: 3px solid #ff69b4; /* Matching border color */
   padding: 0.1em 0.5em; /* Minimal vertical padding */
-  box-shadow: 1px 1px 0px 0px #e75480, 
-              2px 2px 0px 0px #e75480, 
-              3px 3px 0px 0px #e75480, 
-              4px 4px 0px 0px #e75480, 
-              5px 5px 0px 0px #e75480; /* Shadow in a darker pink */
+  box-shadow:
+    1px 1px 0px 0px #e75480,
+    2px 2px 0px 0px #e75480,
+    3px 3px 0px 0px #e75480,
+    4px 4px 0px 0px #e75480,
+    5px 5px 0px 0px #e75480; /* Shadow in a darker pink */
   position: relative;
   user-select: none;
   -webkit-user-select: none;
@@ -493,9 +486,6 @@ a.card-link {
   }
 }
 
-
-
-
 #particles-js {
   position: fixed;
   width: 100%;
@@ -503,4 +493,37 @@ a.card-link {
   top: 0;
   left: 0;
   z-index: -1; /* Send particles behind other content */
+}
+
+
+
+/* Carousel Custom Styles */
+.carousel {
+  max-width: 600px;
+  margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel img {
+  width: 100%; /* Fill width of the container */
+  height: 400px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image covers the entire space without distortion */
+  border: 5px solid pink; /* Add pink border */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
 }
