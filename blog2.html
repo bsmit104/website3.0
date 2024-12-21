@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Braydens Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Micro+5&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Wallpoet&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top wallpoet-regular navbar-custom">
+    <div class="container">
+      <a class="wallpoet-regular navbar-brand" href="#">BRAYDEN SMITH | GAME DEV</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="blog.html" data-glitch="BACK">BACK</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="particles-js"></div>
+
+  <div class="container text-center mt-4">
+    <h1 class="display-2">Good Design</h1>
+  </div>
+  
+  <div class="container">
+  
+    <div class="row featurette justify-content-center">
+      <div class="col-md-10">
+        <h2 class="featurette-heading text-center">Some Recent Thoughts</h2>
+        
+        <!-- First Paragraph -->
+        <p class="lead text-justify">
+          In grid-based games, effective object placement is key to ensuring a seamless and 
+          engaging experience for players. The SquareSpawner script is designed to dynamically 
+          spawn squares in a controlled manner, ensuring no overlap or undesirable patterns, 
+          such as 2x2 blocks. It employs a grid-like spawning logic while maintaining resource 
+          efficiency through object pooling.
+        </p>
+        
+        <!-- Second Paragraph with Image -->
+        <p class="lead text-justify">
+          The script begins by calculating the dimensions of the square prefab using its 
+          SpriteRenderer. This ensures accurate positioning of the squares in the grid. 
+          An initial row of squares is spawned horizontally at the start of the game, 
+          providing a structured baseline. To facilitate periodic spawning of squares, 
+          the script uses Unity’s InvokeRepeating() method. This allows for continuous 
+          spawning at defined intervals, ensuring the grid evolves dynamically as the 
+          game progresses. A HashSet tracks occupied positions, ensuring that subsequent 
+          squares adhere to placement constraints without overlap.
+          
+          <!-- Image and subtext container on the right -->
+          <div class="container d-flex justify-content-end align-items-start float-end" style="max-width: 400px;">
+            <div class="text-end">
+              <video autoplay loop muted playsinline class="img-fluid" style="max-width: 100%; height: auto;">
+                <source src="assets/blogart/terrainGen.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+              <small class="d-block text-center mt-2">gif of the terrain generation only</small>
+            </div>
+          </div>
+        </p>
+        
+        
+        <!-- Third Paragraph -->
+        <p class="lead text-justify">
+          A crucial aspect of this script is its ability to add randomness to square placement 
+          without compromising grid integrity. Each new square is spawned in one of four random 
+          directions—left, right, up, or down—from the last spawned square. The GetRandomDirection() 
+          method handles this logic, ensuring variability. Before placing a square, the script 
+          validates the chosen position using the IsValidPosition() method. This validation process ensures: 
+          <br><br>
+          The position is not already occupied. 
+          <br><br>
+          Placing a square at the chosen position does not 
+          create a 2x2 block, which could disrupt the visual and functional flow of the game.
+          <br><br>
+          If no valid position is found after a set number of attempts, the script skips spawning 
+          for that cycle, maintaining game stability.
+        </p>
+
+        <p class="lead text-justify">
+          To optimize performance, the script employs an object pooling mechanism. 
+          A Queue is used to manage active squares, ensuring that the number of 
+          instantiated squares remains within a predefined limit. When the pool size 
+          exceeds this limit, the script removes the oldest square from the game world. 
+          This is managed in the SpawnSquareAtPosition() method, which handles instantiation, 
+          updates the pool, and removes outdated objects. By reusing squares, the pooling 
+          system reduces the overhead associated with frequent instantiation and destruction, 
+          ensuring smooth performance even on resource-constrained platforms like mobile devices.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="js/myParticlesPink.js"></script>
+</body>
+</html>

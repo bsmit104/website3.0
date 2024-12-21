@@ -68,29 +68,112 @@
 
   <div class="container">
     <hr class="featurette-divider">
+
+    <h2 class="featurette-heading">Pokemon Database</h2>
+    <div class="row featurette">
+      <div class="col-md-8">
+        <p class="lead text-justify">
+          The Pokémon Database project is designed to manage and analyze Pokémon 
+          data using PostgreSQL. The dataset was loaded from a CSV file obtained 
+          from Kaggle, and I used pandas to read the file and insert it into the 
+          database. The schema includes tables like example_table for storing Pokémon 
+          stats and types for categorizing Pokémon by type. This setup allows for various 
+          queries, such as calculating average stats for each type, retrieving Pokémon 
+          by their type or legendary status, and using a custom SQL function like 
+          avg_stats_by_type to get average stats for a specific type of Pokémon.
+        </p>
+      </div>
+      
+      <!-- Image and subtext container on the right -->
+      <div class="col-md-4 d-flex justify-content-end align-items-start">
+        <div class="text-end">
+          <img src="assets/data/pokemon.png" class="img-fluid" alt="Design image" style="max-width: 100%; height: auto;">
+          <small class="d-block text-center mt-2 text-white">Image of a pgsql query to find avg stats by type</small>
+        </div>
+      </div>
+    </div>
+    
+    <p class="lead text-justify">
+      One of the things I experimented with was normalizing the data into 
+      separate tables for Pokémon, types, and their relationships. This made the 
+      database more flexible and efficient for querying. I also worked on optimizing 
+      the data insertion process by selecting specific columns 
+      (like pokemonname, attack, defense, and speed) and using pandas 
+      and SQLAlchemy to insert the data into PostgreSQL in chunks, which 
+      helped improve performance when handling large datasets. This approach 
+      made it easier to work with the data and allowed for faster queries and analysis.
+    </p>
     
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">the classic, POKEMON</h2>
+        <h2 class="featurette-heading">RSA File Encryption</h2>
         <p class="lead">
-          Includes ...
+          RSA cryptography is a fundamental algorithm for secure data communication, relying on 
+          large prime numbers, modular arithmetic, and number theory. This implementation, written 
+          in C with the GNU MP (GMP) library for handling large integers, encompasses key generation, 
+          encryption, decryption, and digital signatures. The key generation process involves creating 
+          two large primes (p and q), calculating their product (n) as the modulus, and determining 𝜙(𝑛)ϕ(n) for 
+          selecting a public exponent e that is coprime to 𝜙
+          (𝑛)ϕ(n). Using the modular inverse, the private key d is derived. File-based functions securely store 
+          and retrieve keys, while modular exponentiation powers encryption (𝑐=𝑚𝑒mod  𝑛c=m e modn) and decryption (𝑚=𝑐𝑑mod  𝑛m=c d modn) 
+          processes. Block-based encryption and decryption ensure efficient handling of large messages, with dynamic sizing based on the modulus.
+          Digital signatures enhance security by verifying authenticity. A message signed with a private key is validated by checking its 
+          integrity against the public key. 
         </p>
       </div>
       <div class="col-md-5 order-md-1">
-        <img src="assets/comingsoon.png" alt="Your Image" class="img-fluid" />
+        <img src="assets/data/encrypt.png" alt="Your Image" class="img-fluid" />
       </div>
-      <!-- https://www.youtube.com/embed/xb-QCeGIBgw?si=iSvBNJayu8v-soAX -->
     </div>
+    <p class="lead text-justify">
+      Key mathematical operations, such as GCD calculation for ensuring e is valid and modular inverse 
+        for computing d, underpin the algorithm's functionality. This implementation not only demonstrates the mechanics of RSA but also 
+        serves as a practical exploration of cryptographic principles, offering a robust and modular approach to securing data.
+    </p>
+
+    <h2 class="featurette-heading">Multithreaded Password Cracker</h2>
     <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Alien Bank ...</h2>
-        <p class="lead">
-          Includes ... 
+      <div class="col-md-8">
+        <p class="lead text-justify">
+          This code represents a parallelized password-cracking system that uses 
+          multiple servers to efficiently guess passwords encrypted with cryptographic 
+          hashes. The system utilizes both TCP and UDP protocols for communication 
+          between servers, with a focus on splitting the password cracking task 
+          across different nodes. The main function, depending on the host's 
+          identity (either "noggin," "thor," "nogbad," or "olaf"), orchestrates 
+          the distribution of password-cracking tasks. Each server attempts to crack 
+          different parts of the password space using a combination of multi-threading 
+          (via std::thread) and brute force. The password hash comparison is done by 
+          generating hash values for all possible combinations from a predefined character 
+          set and comparing them with the target hash. Upon success, the cracked passwords 
+          are sent back to the main server, where they are compiled into a final message.
+          The system uses multicast UDP for receiving encrypted password hashes, which 
+          are distributed across the servers for cracking. The crackerjack function manages 
+          this process by spawning threads to break down the task into smaller chunks, 
+          leveraging the computational power of each server. Once each server has attempted 
+          its portion of the task, the results are communicated back to the main server via 
+          UDP. The passwords that were successfully cracked on the secondary servers are collected 
+          and integrated into the main result set. The use of parallel processing through 
+          threading and distributed computing across multiple machines accelerates the 
+          password-cracking process, making the system scalable and efficient.
         </p>
       </div>
-      <div class="col-md-5 order-md-1">
-        <img src="assets/comingsoon.png" alt="Your Image" class="img-fluid" />
+      
+      <!-- Image and subtext container on the right -->
+      <div class="col-md-4 d-flex justify-content-end align-items-start">
+        <div class="text-end">
+          <img src="assets/data/cracker.png" class="img-fluid" alt="Design image" style="max-width: 100%; height: auto;">
+          <small class="d-block text-center mt-2 text-white">Image of a pgsql query to find avg stats by type</small>
+        </div>
       </div>
+    </div>
+<!--     
+    <p class="lead text-justify">
+      The use of parallel processing through 
+          threading and distributed computing across multiple machines accelerates the 
+          password-cracking process, making the system scalable and efficient.
+    </p> -->
+
     </div>
     </div> 
     </div> 
