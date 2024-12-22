@@ -69,6 +69,44 @@
   <div class="container">
     <hr class="featurette-divider">
 
+    <h2 class="featurette-heading">Python Maze Generator & Solver</h2>
+    <div class="row featurette">
+      <div class="col-md-8">
+        <p class="lead text-justify">
+          The maze generation script uses a depth-first search (DFS) algorithm to carve paths into a grid 
+          initially filled with walls, ensuring paths are precisely one cell wide. Starting at a designated 
+          cell (1, 1), the algorithm explores random directions, carving two-cell-wide paths and marking the 
+          intervening walls as part of the path while maintaining surrounding walls. Dead ends are resolved 
+          through backtracking using a stack until all reachable cells are visited. An entrance at (1, 0) 
+          and an exit at (height-2, width-1) are manually carved after the maze is generated, creating a 
+          solvable maze with clear entry and exit points. The maze is then saved as a Portable Pixmap (PPM) 
+          file, where walls are represented in black (0 0 0) and paths in white (255 255 255), allowing for 
+          easy visualization in image viewers. The script ensures odd dimensions for proper maze structure, 
+          and its simplicity and flexibility make it an excellent tool for experimenting with procedural 
+          generation or learning algorithms.
+        </p>
+      </div>
+      
+      <!-- Image and subtext container on the right -->
+      <div class="col-md-4 d-flex justify-content-end align-items-start">
+        <div class="text-end">
+          <img src="assets/data/maze.png" class="img-fluid" alt="Design image" style="max-width: 100%; height: auto;">
+          <small class="d-block text-center mt-2 text-white">Image of a generated maze using a ppm file</small>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <p class="lead text-justify">
+      One of the things I experimented with was normalizing the data into 
+      separate tables for Pokémon, types, and their relationships. This made the 
+      database more flexible and efficient for querying. I also worked on optimizing 
+      the data insertion process by selecting specific columns 
+      (like pokemonname, attack, defense, and speed) and using pandas 
+      and SQLAlchemy to insert the data into PostgreSQL in chunks, which 
+      helped improve performance when handling large datasets. This approach 
+      made it easier to work with the data and allowed for faster queries and analysis.
+    </p> -->
+
     <h2 class="featurette-heading">Pokemon Database</h2>
     <div class="row featurette">
       <div class="col-md-8">
@@ -123,6 +161,7 @@
       </div>
       <div class="col-md-5 order-md-1">
         <img src="assets/data/encrypt.png" alt="Your Image" class="img-fluid" />
+        <small class="d-block text-center mt-2 text-white">Image of file encrypt function</small>
       </div>
     </div>
     <p class="lead text-justify">
@@ -163,7 +202,7 @@
       <div class="col-md-4 d-flex justify-content-end align-items-start">
         <div class="text-end">
           <img src="assets/data/cracker.png" class="img-fluid" alt="Design image" style="max-width: 100%; height: auto;">
-          <small class="d-block text-center mt-2 text-white">Image of a pgsql query to find avg stats by type</small>
+          <small class="d-block text-center mt-2 text-white">Image of central cracker functions</small>
         </div>
       </div>
     </div>
