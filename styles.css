@@ -8,6 +8,10 @@ body {
   background-position: center;
   font-family: "Wallpoet", sans-serif; /* The font used on index.html */
   color: white; /* Set text color to white */
+  text-shadow: 2px 2px 0px black, 
+               -2px -2px 0px black, 
+               -2px 2px 0px black, 
+               2px -2px 0px black; /* Creates a black outline */
   background-color: #6800d0 !important;
 }
 

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Braydens Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Micro+5&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Wallpoet&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top wallpoet-regular navbar-custom"
+    >
+      <div class="container">
+        <a class="wallpoet-regular navbar-brand" href="#"
+          >BRAYDEN SMITH | GAME DEV</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="blog.html" data-glitch="BACK"
+                >BACK</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="particles-js"></div>
+
+    <div class="container text-center mt-4">
+      <h1 class="display-2">Good Design</h1>
+    </div>
+
+    <div class="container">
+      <div class="row featurette justify-content-center">
+        <div class="col-md-10">
+          <h2 class="featurette-heading text-center">Some Recent Thoughts</h2>
+
+          <!-- First Paragraph -->
+          <p class="lead text-justify">
+            I've been working on a Flappy Bird-inspired game called Batsy to
+            familiarize myself with Godot, and it's been a great learning
+            experience. Godot’s scene system and scripting language, GDScript,
+            made implementing mechanics like procedural obstacles and item
+            pooling relatively easy. Compared to other engines I've used, I
+            found that scaling elements in Godot is much smoother, which was a
+            big plus when setting up my game’s layout. While there were a few
+            quirks to get used to, like signal management and node-based
+            organization, overall, the workflow felt intuitive, and I was able
+            to iterate quickly.
+          </p>
+
+          <!-- Second Paragraph with Image -->
+          <p class="lead text-justify">
+            For Batsy, I wanted to ensure a high-quality experience with a clean
+            layout, smooth movement, and rewarding mechanics. The game isn’t
+            finished yet, but I estimate it will be ready in a few more days.
+            One of the cool features I implemented is object pooling for coins
+            and rocks to optimize performance, so instead of constantly creating
+            and destroying objects, the game reuses them when needed. This
+            prevents unnecessary lag and improves efficiency, especially as the
+            game speeds up. I also tweaked the spawning logic to ensure a fair
+            but challenging experience—coins appear in varied, non-repetitive
+            patterns, and obstacles are spaced intelligently to avoid impossible
+            scenarios.
+
+          </p>
+
+          <div
+            class="container d-flex justify-content-end align-items-start float-end"
+            style="max-width: 400px"
+          >
+            <div class="text-end">
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/DEXUESu-Ha4"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+              <small class="d-block text-center mt-2"
+                >gif shows incomplete game</small
+              >
+            </div>
+          </div>
+
+          <!-- Third Paragraph -->
+          <p class="lead text-justify">
+            Another interesting addition was dynamic difficulty scaling—the game 
+            gradually increases in speed, forcing players to react faster as they 
+            progress. To make the world feel more alive, I included smooth scrolling 
+            ground and randomized rock placements, ensuring no two playthroughs feel 
+            exactly the same. Collecting coins adds to a persistent total, which I 
+            plan to expand with unlockable skins or power-ups in the future. With 
+            just a few more refinements, Batsy will be polished and ready to go, 
+            and I’m excited to see how it turns out!
+          </p>
+
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/myParticlesPink.js"></script>
+  </body>
+</html>
